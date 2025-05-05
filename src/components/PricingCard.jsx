@@ -42,44 +42,49 @@ const caseStudies = [
 const PricingCards = () => {
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-100">
-    <div className="w-full mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-8">
-        Real Businesses, Real Results – Case Studies
-      </h2>
-      <div className="w-[100%] md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center">
+  <div className="w-full mx-auto">
+    <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+      Real Businesses, Real Results – Case Studies
+    </h2>
 
-        {caseStudies.map((card, index) => (
-          <div
-            key={index}
-            className="w-full md:w-[90%] lg:w-[80%] h-auto bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow space-y-4"
-          >
-            <h3 className="text-xl font-bold mb-4 text-[#008080]">{card.title}</h3>
-            <p className="text-[#607184]">Challenge:</p> 
-            <p className="mb-2 text-[#6b7286]">
-           {card.challenge}
-            </p>
-            <p className="text-[#607184]">Solution:</p>
-            <p className="mb-2 text-[#6b7286]">
-               {card.solution}
-            </p>
-            <div className="mt-4">
-              <p className="text-[#607184] mb-1">Results:</p>
-              <ul className="list-disc list-inside text-[#6b7286] space-y-1">
-                {card.results.map((result, i) => (
-                  <li key={i}>{result}</li>
-                ))}
-              </ul>
-            </div>
+    <div className="w-full md:w-[85%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {caseStudies.map((card, ii) => (
+        <div
+          key={ii}
+          className="w-full bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow space-y-4"
+        >
+          <h3 className="text-xl font-bold text-[#008080]">{card.title}</h3>
+
+          <div>
+            <p className="text-[#607184] font-semibold">Challenge:</p>
+            <p className="text-[#6b7286]">{card.challenge}</p>
           </div>
-        ))}
-      </div>
-    </div>
-    <div className="flex justify-center items-center mt-8">
-      <button className="text-[#e9f1f1] bg-[#008080] border-2 border-[#008080] hover:bg-[#a9b6b6] font-medium px-3 py-2 rounded-xl">
-      Schedule a free consultation today
-      </button>
+
+          <div>
+            <p className="text-[#607184] font-semibold">Solution:</p>
+            <p className="text-[#6b7286]">{card.solution}</p>
+          </div>
+
+          <div>
+            <p className="text-[#607184] font-semibold">Results:</p>
+            <ul className="list-disc list-inside text-[#6b7286] space-y-1">
+              {card.results.map((result, i) => (
+                <li key={i}>{result}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
     </div>
   </div>
+
+  <div className="flex justify-center mt-10">
+    <button className="text-white bg-[#008080] hover:bg-[#006666] border border-[#008080] font-medium px-6 py-3 rounded-xl transition">
+      Schedule a free consultation today
+    </button>
+  </div>
+</div>
+
   
   );
 };

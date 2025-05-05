@@ -13,13 +13,14 @@ const HeroSection = () => {
 <section className="min-h-screen flex flex-col  items-center justify-evenly px-6 md:px-16 py-10 lg:flex-row bg-gray-100">
   {/* Left Side - Text */}
   <div className="md:w-1/2 text-center md:text-left space-y-6 ">
-    <h1 className="text-3xl md:mt-20 md:text-5xl lg:mt-0 font-bold text-gray-900  ">
+    <h1 className="text-3xl mt-20 md:text-5xl lg:mt-0 font-bold text-gray-900  ">
      
 Hire Trusted Blue-Collar Pros on a Project Basis Fast, Safe, and Free!
     </h1>
     <div className="flex items-center space-x-[-10px]">
-  {images.map((img, index) => (
+  {images.map((img, ) => (
     <img
+  
       key={img.id}
       src={img.url}
       alt={`Image ${img.id}`}
@@ -37,11 +38,11 @@ View services in Dallas
   </div>
 
 
-  <div className="lg:h-screen w-80  lg:w-1/4 flex justify-center items-center lg:bg-yellow-300">
+  <div className="lg:h-screen w-90  lg:w-1/4 flex justify-center items-center lg:bg-yellow-300">
   <img
     src="/HeroImage2.webp"
     alt="Hero Image"
-    className="w-full h-full object-contain lg:object-cover lg:h-96 lg:mr-20"
+    className="w-full h-full object-contain lg:object-cover lg:h-[60%]  lg:mr-20"
   />
 </div>
 

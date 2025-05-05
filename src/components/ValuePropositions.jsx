@@ -32,34 +32,35 @@ const ValuePropositions = () => {
     },
   ];
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-100">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">
-          Value Propositions
-        </h2>
-        <div className="w-[100%] h-[100%] m-auto grid grid-cols-1 md:grid-cols-4 gap-4 p-2">
-          {caseStudies.map((card, index) => (
-            <div
-              key={index}
-              className="w-full max-w-[380px]  min-h-[300px]   bg-white p-4  rounded-2xl shadow-md hover:shadow-lg transition-shadow flex flex-col justify-start"
-            >
-              <img
-                src={card.image}
-                alt={card.title}
-                className="w-full h-40 object-contain rounded-xl"
-              />
+<div className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-100">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+      Value Propositions
+    </h2>
 
-              <h3 className="text-xl font-bold mb-4 text-[#008080] ">
-                {card.title}
-              </h3>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {caseStudies.map((card, io) => (
+        <div
+          key={io}
+          className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow p-5 flex flex-col items-start"
+        >
+          <img
+            src={card.image}
+            alt={card.title}
+            className="w-full h-40 object-contain rounded-xl mb-4"
+          />
 
-              <p className="mb-2 text-gray-700">{card.solution}</p>
-              <div className="mt-4"></div>
-            </div>
-          ))}
+          <h3 className="text-xl font-bold text-[#008080] mb-2">
+            {card.title}
+          </h3>
+
+          <p className="text-gray-700">{card.solution}</p>
         </div>
-      </div>
+      ))}
     </div>
+  </div>
+</div>
+
   );
 };
 

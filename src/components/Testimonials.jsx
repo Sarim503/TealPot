@@ -32,9 +32,9 @@ const Testimonials = () => {
           Here is what our clients have to say about us
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 place-items-center">
-          {caseStudies.map((card, index) => (
+          {caseStudies.map((card, k) => (
             <div
-              key={index}
+              key={k}
               className="w-full max-w-[380px] h-auto min-h-[380px] bg-white p-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow flex flex-col justify-start"
             >
               <img

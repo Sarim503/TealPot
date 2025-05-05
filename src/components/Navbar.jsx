@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav className=" shadow-md fixed top-0 left-0 right-0 z-50 bg-gray-100">
      <div className="flex justify-end">
-  <button className="text-[#008080] border-2 border-[#008080] hover:bg-[#008080] hover:text-white font-medium px-3 py-2 rounded-xl md:hidden">
+  <button className="text-white bg-[#008080] m-2 border-2 border-[#008080]  hover:text-white font-medium px-3 py-2 rounded-xl md:hidden">
     Open App
   </button>
 </div>
@@ -59,14 +59,14 @@ export default function Navbar() {
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden focus:outline-none"
+          className="md:hidden focus:outline-none "
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
       {isOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2 bg-white">
+        <div className="md:hidden px-4 pb-4 space-y-2  w-48 ">
           <a href="#" className="block text-gray-700 hover:text-black">
             Home
           </a>

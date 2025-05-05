@@ -36,9 +36,9 @@ const Stayinformed = () => {
 
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
-          {caseStudies.map((card, index) => (
+          {caseStudies.map((card, j) => (
             <div
-              key={index}
+              key={j}
               className=" w-[100%] h-auto bg-white p-4 rounded-2xl shadow-md hover:shadow-lg transition-shadow space-y-6"
             >
               <img

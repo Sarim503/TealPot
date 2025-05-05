@@ -2,7 +2,7 @@ import React from "react";
 
 const Professional = () => {
   return (
-<div className="flex flex-col md:flex-row justify-center items-center md:space-x-20 space-y-6 md:space-y-0 py-10 bg-gray-100">
+<div className="flex flex-col md:flex-row justify-center items-center md:space-x-20 space-y-6 md:space-y-0 py-10 p-4 bg-gray-100">
 
       <div className="w-[100%] md:w-[38%] p-2 space-y-6  ">
         <h1 className="text-5xl font-semibold">
@@ -47,7 +47,7 @@ const Professional = () => {
         </button>
       </div>
 
-      <div className=" w-full md:w-1/6 flex justify-center p-2">
+      <div className=" w-full  lg:w-1/4 flex md:flex-col justify-center p-2">
         <img src="p1.webp" className="w-full h-full rounded-lg" />
       </div>
     </div>

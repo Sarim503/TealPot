@@ -26,9 +26,9 @@ const Helpful = () => {
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
-          {caseStudies.map((card, index) => (
+          {caseStudies.map((card,i) => (
             <div
-              key={index}
+              key={i}
               className="w-[100%] h-[100%] bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow flex flex-col justify-between"
             >
               <div>
