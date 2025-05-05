@@ -1,5 +1,6 @@
 import React from 'react'
 import { ArrowRight } from "lucide-react";
+import Image from 'next/image';
 
 const HeroSection = () => {
     const images = [
@@ -17,18 +18,24 @@ const HeroSection = () => {
      
 Hire Trusted Blue-Collar Pros on a Project Basis Fast, Safe, and Free!
     </h1>
+    import Image from 'next/image';
+
     <div className="flex items-center space-x-[-10px]">
-  {images.map((img, ) => (
-    <img
-  
-      key={img.id}
-      src={img.url}
-      alt={`Image ${img.id}`}
-      className="w-10 h-10 rounded-full border-2 border-white object-cover"
-    />
+  {images.map((img) => (
+    <div key={img.id} className="w-[50px] h-[50px] relative rounded-full overflow-hidden border-2 border-white">
+      <Image
+        src={img.url}
+        alt={`Image ${img.id}`}
+        fill
+        className="object-cover"
+      />
+    </div>
   ))}
   <p className="px-5 font-semibold text-black">824 companies joined us!</p>
 </div>
+
+
+
 
 
 <button className="flex items-center gap-2 text-black hover:text-gray-600 px-4 py-2 rounded transition">

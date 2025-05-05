@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from 'next/image';
 const ImageSection = () => {
   const Images = [
     {
@@ -17,20 +17,19 @@ const ImageSection = () => {
   ];
 
   return (
-    <div className="w-full px-12 py-16 bg-gray-100 flex-col md:flex md:flex-row  justify-center">
-  {Images.map((Image) => (
-    <div
-      key={Image.id}
-      className="w-[80%] md:w-[20%]   mx-2" 
-    >
-      <img
-        src={Image.image}
-        alt={`Image ${Image.id}`}
-        className="w-full h-auto object-cover rounded-md"
-      />
-    </div>
-  ))}
-</div>
+    <div className="w-full px-12 py-16 bg-gray-100 flex flex-col md:flex-row justify-center items-center md:items-start gap-6">
+    {Images.map((img) => (
+      <div key={img.id} className="w-[80%] md:w-[20%] mx-2">
+        <Image
+          src={img.image}
+          alt={`Image ${img.id}`}
+          width={400}
+          height={300}
+          className="rounded-md object-cover w-full h-auto"
+        />
+      </div>
+    ))}
+  </div>
 
   );
 };

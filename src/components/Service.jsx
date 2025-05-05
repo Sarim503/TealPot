@@ -1,6 +1,7 @@
 "use client";
 import { useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from 'next/image'
 
 const services = [
   {
@@ -74,19 +75,21 @@ export default function ServicesCarousel() {
           className="flex gap-6 overflow-hidden scrollbar-hide    "
         >
           {services.map((service) => (
-            <div
-              key={service.id}
-              className="min-w-[400px]   lg:min-w-[250px] w-[25%]  rounded-lg shadow   "
-            >
-              <img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-80 object-cover rounded-md"
-              />
-              <p className="mt-2 text-left text-[#6b7296] text-lg font-medium truncate ">
-                {service.title}
-              </p>
-            </div>
+           <div
+           key={service.id}
+           className="min-w-[400px] lg:min-w-[250px] w-[25%] rounded-lg shadow"
+         >
+           <Image
+             src={service.image}
+             alt={service.title}
+             width={400}
+             height={320}
+             className="w-full h-80 object-cover rounded-md"
+           />
+           <p className="mt-2 text-left text-[#6b7296] text-lg font-medium truncate">
+             {service.title}
+           </p>
+         </div>
           ))}
         </div>
 

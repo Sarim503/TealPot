@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image';
 
 const Professional = () => {
   return (
@@ -47,9 +48,16 @@ const Professional = () => {
         </button>
       </div>
 
-      <div className=" w-full  lg:w-1/4 flex md:flex-col justify-center p-2">
-        <img src="p1.webp" className="w-full h-full rounded-lg" />
-      </div>
+      
+<div className="w-full lg:w-1/4 flex md:flex-col justify-center p-2">
+  <Image
+    src="/p1.webp"
+    alt="Preview"
+    width={400}
+    height={300}
+    className="w-full h-full rounded-lg object-cover"
+  />
+</div>
     </div>
   );
 };

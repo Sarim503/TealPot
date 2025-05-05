@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const ValuePropositions = () => {
@@ -44,9 +45,11 @@ const ValuePropositions = () => {
           key={io}
           className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-shadow p-5 flex flex-col items-start"
         >
-          <img
+          <Image
             src={card.image}
             alt={card.title}
+            width={400}
+            height={300}
             className="w-full h-40 object-contain rounded-xl mb-4"
           />
 

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Testimonials = () => {
@@ -37,9 +38,11 @@ const Testimonials = () => {
               key={k}
               className="w-full max-w-[380px] h-auto min-h-[380px] bg-white p-2 rounded-2xl shadow-md hover:shadow-lg transition-shadow flex flex-col justify-start"
             >
-              <img
+              <Image
                 src={card.image}
                 alt={card.title}
+                width={400}
+                height={300}
                 className="w-full h-96 object-cover rounded-xl"
               />
 

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
+import Image from "next/image";
 
 const Stayinformed = () => {
   const caseStudies = [
@@ -35,33 +36,33 @@ const Stayinformed = () => {
 </div>
 
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
-          {caseStudies.map((card, j) => (
-            <div
-              key={j}
-              className=" w-[100%] h-auto bg-white p-4 rounded-2xl shadow-md hover:shadow-lg transition-shadow space-y-6"
-            >
-              <img
-                src={card.image}
-                alt={card.title}
-                className="w-full h-96 object-cover rounded-xl hover:scale-105 transition-transform duration-300 ease-in-out"
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8 place-items-center">
+  {caseStudies.map((card, j) => (
+    <div
+      key={j}
+      className="w-full max-w-xs md:max-w-sm h-auto bg-white p-4 rounded-2xl shadow-md hover:shadow-lg transition-shadow space-y-6"
+    >
+      <Image
+        src={card.image}
+        alt={card.title}
+        width={400}
+        height={300}
+        className="w-full h-96 object-cover rounded-xl hover:scale-105 transition-transform duration-300 ease-in-out"
+      />
 
-              />
+      <h3 className="text-xl font-bold mb-4 text-[#008080] ">
+        {card.title}
+      </h3>
 
-              <h3 className="text-xl font-bold mb-4 text-[#008080] ">
-                {card.title}
-              </h3>
+      <Link href={`/case-studies/${card.slug}`}>
+        <button className="mt-2 font-sm flex items-center">
+          Details <FaArrowRight className="ml-2" />
+        </button>
+      </Link>
+    </div>
+  ))}
+</div>
 
-             
-              <Link href={`/case-studies/${card.slug}`}>
-  <button className="mt-2  font-sm flex items-center">
-    Details <FaArrowRight className="ml-2" />
-  </button>
-</Link>
-
-            </div>
-          ))}
-        </div> 
       </div>
     </div>
   );
